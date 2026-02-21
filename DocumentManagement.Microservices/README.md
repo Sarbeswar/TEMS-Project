@@ -86,3 +86,4 @@ DocumentManagement.Microservices
 - **Saga**: orchestrator in `services/ICMP.API`.
 - **API Gateway**: `gateway/DocumentGateway.Api`.
 - **Circuit Breaker**: in gateway + each service external HTTP client (Polly/.NET resilience).
+
