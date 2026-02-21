@@ -91,9 +91,10 @@ DocumentManagement.Microservices
 ## Detailed implementation guide
 - See `../PATTERN_IMPLEMENTATION_GUIDE.md` for step-by-step implementation across all services and layers.
 - Kafka 50-topic and partition plan: `../KAFKA_50_TOPICS_GUIDE.md`.
+Kafka producer/consumer + DTO placement blueprint: `../KAFKA_CODE_STRUCTURE_GUIDE.md`.
 
 
 ## Detailed implementation guide
 - See `../PATTERN_IMPLEMENTATION_GUIDE.md` for step-by-step implementation across all services and layers.
 
-- Interview prep: `../INTERVIEW_PREPARATION_GUIDE.md` (how to explain architecture in interviews).
+-- Interview prep: `../INTERVIEW_PREPARATION_GUIDE.md` (how to explain architecture in interviews).

@@ -147,3 +147,10 @@ Every message should include:
 - Consumer handlers: each `*.WebAPI` background consumer or hosted service
 - Saga correlation: `services/ICMP.API` (`ICMP.Application` + `ICMP.Infrastructure`)
 
+
+## 10) Implementation class/file blueprint
+
+For exact file-level guidance on creating producer/consumer classes and DTO/event models, see:
+- `KAFKA_CODE_STRUCTURE_GUIDE.md`
+
+
