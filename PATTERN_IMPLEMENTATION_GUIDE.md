@@ -233,7 +233,6 @@ Saga is done when:
 - At least one failure path triggers compensation.
 - Duplicate event handling does not corrupt state.
 
-
 ## 9) Kafka message broker implementation (50 topics + partitioning)
 
 Because your system uses Kafka heavily, implement the event bus with:
