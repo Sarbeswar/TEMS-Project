@@ -204,3 +204,10 @@ DocumentManagement.Microservices
 > “This architecture gives us domain-driven modularity with Clean Architecture per service, performance via CQRS, reliability via Saga and resilience policies, and secure centralized access through API Gateway. It is optimized for maintainability, scale, and production fault tolerance.”
 
 Use this close when the interviewer asks: “Any final thoughts on your design?”
+## Extra interview question: Why 50 Kafka topics and how do you partition?
+
+Suggested answer:
+- "I split topics by command/event/retry/DLQ/audit responsibilities so scaling and retention are controlled per use-case."
+- "I publish with `CorrelationId` as partition key so all events for one saga request stay ordered in the same partition."
+- "I use Outbox + idempotent consumers to handle at-least-once delivery safely."
+- "If lag grows, I increase partitions mainly on high-volume event topics first."
