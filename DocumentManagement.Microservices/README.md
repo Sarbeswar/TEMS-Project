@@ -87,5 +87,3 @@ DocumentManagement.Microservices
 - **API Gateway**: `gateway/DocumentGateway.Api`.
 - **Circuit Breaker**: in gateway + each service external HTTP client (Polly/.NET resilience).
 
-## Detailed implementation guide
-- See `../PATTERN_IMPLEMENTATION_GUIDE.md` for step-by-step implementation across all services and layers.
