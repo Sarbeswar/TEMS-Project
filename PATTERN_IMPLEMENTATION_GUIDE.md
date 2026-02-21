@@ -232,8 +232,6 @@ Saga is done when:
 - Happy path works end-to-end.
 - At least one failure path triggers compensation.
 - Duplicate event handling does not corrupt state.
-
-
 ## 9) Kafka message broker implementation (50 topics + partitioning)
 
 Because your system uses Kafka heavily, implement the event bus with:
@@ -245,4 +243,3 @@ Because your system uses Kafka heavily, implement the event bus with:
 
 Use this detailed catalog and topic-by-topic plan:
 - `KAFKA_50_TOPICS_GUIDE.md`
-

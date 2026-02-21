@@ -204,7 +204,6 @@ DocumentManagement.Microservices
 > “This architecture gives us domain-driven modularity with Clean Architecture per service, performance via CQRS, reliability via Saga and resilience policies, and secure centralized access through API Gateway. It is optimized for maintainability, scale, and production fault tolerance.”
 
 Use this close when the interviewer asks: “Any final thoughts on your design?”
-
 ## Extra interview question: Why 50 Kafka topics and how do you partition?
 
 Suggested answer:
