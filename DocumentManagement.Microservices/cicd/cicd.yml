@@ -1,9 +1,0 @@
-name: document-management-microservices
-
-trigger:
-  - main
-
-stages:
-  - build
-  - test
-  - deploy
