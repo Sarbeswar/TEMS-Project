@@ -246,3 +246,4 @@ Use this detailed catalog and topic-by-topic plan:
 - `KAFKA_50_TOPICS_GUIDE.md`
 - `KAFKA_CODE_STRUCTURE_GUIDE.md` (exact `KafkaEventProducer.cs`, `KafkaEventConsumer.cs`, DTO/event model placement)
 
+
