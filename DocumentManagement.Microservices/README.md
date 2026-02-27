@@ -87,3 +87,16 @@ DocumentManagement.Microservices
 - **API Gateway**: `gateway/DocumentGateway.Api`.
 - **Circuit Breaker**: in gateway + each service external HTTP client (Polly/.NET resilience).
 
+**Kafka Event Bus**: shared contract + producer/consumer abstractions in `shared/EventBus.Kafka` with 50-topic design and partition key strategy.
+
+## Detailed implementation guide
+- See `../PATTERN_IMPLEMENTATION_GUIDE.md` for step-by-step implementation across all services and layers.
+- Kafka 50-topic and partition plan: `../KAFKA_50_TOPICS_GUIDE.md`.
+Kafka producer/consumer + DTO placement blueprint: `../KAFKA_CODE_STRUCTURE_GUIDE.md`.
+
+
+## Detailed implementation guide
+- See `../PATTERN_IMPLEMENTATION_GUIDE.md` for step-by-step implementation across all services and layers.
+
+-- Interview prep: `../INTERVIEW_PREPARATION_GUIDE.md` (how to explain architecture in interviews).
+
