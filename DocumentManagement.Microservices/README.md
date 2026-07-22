@@ -44,11 +44,7 @@ DocumentManagement.Microservices
 │   │   ├── IRMDownload.Infrastructure
 │   │   └── IRMDownload.WebAPI
 │   │
-│   └── NotificationService
-│       ├── Notification.Domain
-│       ├── Notification.Application
-│       ├── Notification.Infrastructure
-│       └── Notification.WebAPI
+
 │
 ├── shared
 │   ├── SharedKernel

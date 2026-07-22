@@ -1,0 +1,36 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "irm-upload-crud": {
+        "ClusterId": "irm-upload-service",
+        "Match": { "Path": "/api/irm/{**catch-all}" },
+        "Transforms": [
+          { "RequestHeader": "X-Correlation-Id", "Set": "{TraceIdentifier}" }
+        ]
+      }
+    },
+    "Clusters": {
+      "irm-upload-service": {
+        "Destinations": {
+          "d1": { "Address": "http://irmuploadservice-webapi/" }
+        },
+        "HttpRequest": {
+          "Version": "2",
+          "VersionPolicy": "RequestVersionOrLower"
+        }
+      }
+    }
+  },
+  "Resilience": {
+    "IrmUploadClient": {
+      "TimeoutSeconds": 10,
+      "RetryCount": 3,
+      "CircuitBreaker": {
+        "FailureRatio": 0.5,
+        "SamplingDurationSeconds": 10,
+        "MinimumThroughput": 20,
+        "BreakDurationSeconds": 30
+      }
+    }
+  }
+}

@@ -232,3 +232,4 @@ Saga is done when:
 - Happy path works end-to-end.
 - At least one failure path triggers compensation.
 - Duplicate event handling does not corrupt state.
+
