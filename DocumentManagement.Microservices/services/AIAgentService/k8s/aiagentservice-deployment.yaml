@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aiagentservice
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aiagentservice
+  template:
+    metadata:
+      labels:
+        app: aiagentservice
+    spec:
+      containers:
+        - name: aiagentservice
+          image: youracr.azurecr.io/aiagentservice:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:8080
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aiagentservice
+spec:
+  selector:
+    app: aiagentservice
+  ports:
+    - port: 80
+      targetPort: 8080
