@@ -44,17 +44,7 @@ DocumentManagement.Microservices
 │   │   ├── IRMDownload.Infrastructure
 │   │   └── IRMDownload.WebAPI
 │   │
-│   ├── NotificationService
-│   │   ├── Notification.Domain
-│   │   ├── Notification.Application
-│   │   ├── Notification.Infrastructure
-│   │   └── Notification.WebAPI
-│   │
-│   └── AIAgentService
-│       ├── AIAgent.Domain
-│       ├── AIAgent.Application
-│       ├── AIAgent.Infrastructure
-│       └── AIAgent.API
+
 │
 ├── shared
 │   ├── SharedKernel
@@ -92,20 +82,4 @@ DocumentManagement.Microservices
 - **Saga**: orchestrator in `services/ICMP.API`.
 - **API Gateway**: `gateway/DocumentGateway.Api`.
 - **Circuit Breaker**: in gateway + each service external HTTP client (Polly/.NET resilience).
-- **Event Sourcing**: write domain events as the source of truth in each service `*.Infrastructure` event store (for example, `ICMP.Infrastructure`), rebuild read models in `*.Application` projections, and publish integration events through Kafka.
-- **Kafka Event Bus**: shared contract + producer/consumer abstractions in `shared/EventBus.Kafka` with 50-topic design and partition key strategy.
 
-## Pattern benefits (quick view)
-- **CQRS**: clear separation of write and read paths improves maintainability and scaling options.
-- **Saga**: provides reliable distributed transaction flow with compensation.
-- **API Gateway**: centralizes routing and cross-cutting policies for all clients.
-- **Circuit Breaker**: protects the system from cascading failures.
-- **Event Sourcing**: keeps complete audit/history and supports projection rebuild.
-
-## Detailed implementation guide
-- See `../PATTERN_IMPLEMENTATION_GUIDE.md` for step-by-step implementation across all services and layers.
-- Kafka 50-topic and partition plan: `../KAFKA_50_TOPICS_GUIDE.md`.
-- Kafka producer/consumer + DTO placement blueprint: `../KAFKA_CODE_STRUCTURE_GUIDE.md`.
-- Interview prep: `../INTERVIEW_PREPARATION_GUIDE.md` (how to explain architecture in interviews).
-- IRM file CRUD code practice (CQRS + Saga + Gateway + Circuit Breaker + Event Sourcing): `../IRM_CRUD_CODE_PRACTICE_GUIDE.md`.
-- AI Agent service implementation guide: `services/AIAgentService/README.md`.
